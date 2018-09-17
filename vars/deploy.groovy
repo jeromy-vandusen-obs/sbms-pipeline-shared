@@ -7,6 +7,6 @@
 // - MONGODB_DATA_PATH
 // - MONGODB_PORT
 // - NETWORK_NAME
-def call(String swarmManager, String stackName) {
-    sh "docker -H $swarmManager stack deploy --compose-file docker-compose.yml --resolve-image always --prune $stackName"
+def call(String stackName) {
+    sh "docker stack deploy --compose-file docker-compose.yml --resolve-image always --prune $stackName"
 }
