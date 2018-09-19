@@ -9,5 +9,6 @@ boolean call(String host, String port, int pingInterval, int maxPings) {
             sh "sleep $pingInterval"
         }
     }
+    sh "rm status.txt"
     return false
 }
