@@ -24,5 +24,5 @@ def call(String type, String message) {
     else {
         icon = type
     }
-    slackSend "<${env.BUILD_URL}|${env.JOB_NAME} #${env.BUILD_NUMBER}>: ${icon} ${message}"
+    slackSend "${icon} <${env.BUILD_URL}|${env.JOB_NAME} #${env.BUILD_NUMBER}>: ${message}"
 }
