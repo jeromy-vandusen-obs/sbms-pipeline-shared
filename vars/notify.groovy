@@ -1,5 +1,5 @@
 def call(String type, String message) {
-    String icon = ''
+    String icon
     if (type == 'INFO') {
         icon = ':information_source:'
     }
