@@ -4,5 +4,5 @@ def call(String imageName, String sourceImageTag, String imageTag, String servic
     withDockerRegistry([url: registryUrl, credentialsId: registryCredentialsId]) {
         sh "docker push $imageName:$imageTag"
     }
-    sh "docker service update --image $iamgeName:$imageTag $serviceName"
+    sh "docker service update --image $imageName:$imageTag $serviceName"
 }
